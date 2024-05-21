@@ -9,4 +9,7 @@ dotnet new webapi -o api
 dotnet watch run
 
 # Program.cs file
- 
+
+# Some VS Code Extensions that makes life easier when using C# .Net
+![alt text](image.png)
+

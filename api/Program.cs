@@ -16,6 +16,5 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-
-app.Run();
+app.Run(); //this excecute the entire server
 
