@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using api.Data;
+using api.Mappers;
 using api.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -24,7 +25,8 @@ namespace api.Controllers
 
         [HttpGet] 
         public IActionResult GetAll(){
-            var stocks = _context.Stocks.ToList();
+            var stocks = _context.Stocks.ToList()
+            .Select(s => s.ToStockDto()); //Select ( function() ) is the .Net version of .map()
 
             return Ok(stocks);
         }
@@ -37,7 +39,7 @@ namespace api.Controllers
                 return NotFound(); //This is one form of IActionResult
             }
 
-            return Ok(stock); 
+            return Ok(stock.ToStockDto()); 
         }
 
 
