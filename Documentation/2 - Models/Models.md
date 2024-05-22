@@ -5,6 +5,8 @@
 Type "prop" + Tab
 Result: public int MyProperty { get; set; } 
 
+ctor + TAB create a constructor
+
 # Linking by convention in C#
 This approach leverages naming conventions and patterns to reduce the amount of boilerplate code and configuration needed.
 
@@ -22,3 +24,4 @@ By convention:
 	•	The Student class name will be the table name.
 	•	The StudentId property will be the primary key.
 	•	The Name and EnrollmentDate properties will be columns in the Student table.
+
